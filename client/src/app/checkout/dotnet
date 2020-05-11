@@ -1,0 +1,13 @@
+usage: restore [OPTIONS] [PATTERN [PATTERN...]]
+Options are:
+
+   -a, --all               Restore all filesystems.
+   -l, --level=LEVEL       Start restoring from the given backup LEVEL
+                           (default 0).
+   -v, --verbose[=LEVEL]   Set verbosity level. Default 100.
+
+Informational options:
+   -h, --help              Display this help message.
+   -V, --version           Display program version.
+
+Send bug reports to bug-tar@gnu.org.
