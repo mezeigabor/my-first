@@ -20,6 +20,13 @@ constructor(private router: Router, private toastr: ToastrService) {}
                             this.toastr.error(error.error.message, error.error.statusCode);
                         }
                     }
+                    if (error.status === 401) {
+                        if (error.error.errors) {
+                            throw error.error;
+                        } else {
+                            this.toastr.error(error.error.message, error.error.statusCode);
+                        }
+                    }                    
                     if (error.status === 404) {
                         this.router.navigateByUrl('/not-found');
                     }
