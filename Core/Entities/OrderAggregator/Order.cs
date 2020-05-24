@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Core.Entities.OrderAggregate;
 
 namespace Core.Entities.OrderAggregator
 {
@@ -9,13 +10,14 @@ namespace Core.Entities.OrderAggregator
         {
         }
 
-        public Order(IReadOnlyList<OrderItem> orderItems, string buyerEmail, Address shipToAddress, DeliveryMethod deliveryMethod, decimal subtotal)
+        public Order(IReadOnlyList<OrderItem> orderItems, string buyerEmail, Address shipToAddress, DeliveryMethod deliveryMethod, decimal subtotal, string pamynetIntentId)
         {
             BuyerEmail = buyerEmail;
             ShipToAddress = shipToAddress;
             DeliveryMethod = deliveryMethod;
             OrderItems = orderItems;
             Subtotal = subtotal;
+            PamynetIntentId = pamynetIntentId;
         }
 
         public string BuyerEmail { get; set; }
